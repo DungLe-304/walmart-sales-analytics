@@ -1,6 +1,6 @@
 # 🛒 Walmart Sales Data Analysis
 
-An end-to-end exploratory data analysis (EDA) project on Walmart transactional sales data from three branches in Myanmar (Jan–Mar 2019). This project includes SQL-based analysis and an interactive HTML dashboard built for portfolio purposes.
+An end-to-end exploratory data analysis (EDA) project on Walmart transactional sales data from three branches across Yangon, Mandalay, and Naypyitaw (Jan–Mar 2019). This project includes SQL-based analysis and an interactive HTML dashboard built for portfolio purposes.
 
 🔗 **[Live Dashboard →](https://DungLe-304.github.io/walmart-sales-analysis/walmart_dashboard.html)**
 
@@ -8,7 +8,7 @@ An end-to-end exploratory data analysis (EDA) project on Walmart transactional s
 
 ## 📌 Project Overview
 
-This project analyzes 1,000 sales transactions across Walmart's Yangon, Mandalay, and Naypyitaw branches to uncover revenue trends, customer behavior patterns, and product line performance.
+This project analyzes 1,000 sales transactions across three branches — Yangon, Mandalay, and Naypyitaw — to uncover revenue trends, customer behavior patterns, and product line performance.
 
 **Key questions answered:**
 - Which branch and product line generate the most revenue?
@@ -90,7 +90,7 @@ walmart-sales-analysis/
 - **Source:** [Kaggle — Walmart Sales Forecasting](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
 - **Period:** January 2019 – March 2019
 - **Records:** 1,000 transactions
-- **Branches:** A (Yangon), B (Mandalay), C (Naypyitaw)
+- **Branches:** Branch A (Yangon), Branch B (Mandalay), Branch C (Naypyitaw)
 - **Features:** Invoice ID, Branch, City, Customer Type, Gender, Product Line, Unit Price, Quantity, Tax, Total, Date, Time, Payment Method, COGS, Gross Income, Rating
 
 ---
