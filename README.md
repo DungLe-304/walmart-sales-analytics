@@ -67,7 +67,6 @@ walmart-sales-analysis/
 | **MySQL** | Data cleaning, feature engineering, exploratory queries |
 | **HTML / CSS / JavaScript** | Interactive dashboard (no frameworks) |
 | **Chart.js** | Data visualization (7 chart types) |
-| **Python** | Data aggregation for dashboard pre-computation |
 
 ---
 
