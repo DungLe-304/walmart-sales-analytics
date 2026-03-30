@@ -843,8 +843,14 @@ class Dashboard {
             qty: d.qty,
             orders: d.orders,
             avg_rating: d.orders > 0 ? d.ratingSum / d.orders : 0,
-            remark: (d.orders > 0 ? d.qty / d.orders : 0) > 5.5 ? 'Good' : 'Bad'
+            remark: null // placeholder, filled after avg is computed
         }));
+
+        // Good = revenue above average across all product lines in filtered data
+        const avgRevenue = tableData.length > 0
+            ? tableData.reduce((sum, r) => sum + r.revenue, 0) / tableData.length
+            : 0;
+        tableData.forEach(r => { r.remark = r.revenue >= avgRevenue ? 'Good' : 'Bad'; });
 
         const sorted = [...tableData].sort((a, b) => {
             const av = a[this.sortCol], bv = b[this.sortCol];
