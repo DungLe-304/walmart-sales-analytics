@@ -2,7 +2,7 @@
 
 An end-to-end exploratory data analysis (EDA) project on Walmart transactional sales data from three branches across Yangon, Mandalay, and Naypyitaw (Jan–Mar 2019). This project includes SQL-based analysis and an interactive HTML dashboard built for portfolio purposes.
 
-🔗 **[Live Dashboard →](https://DungLe-304.github.io/walmart-sales-analysis/walmart_dashboard.html)**
+🔗 **[Live Dashboard →](https://DungLe-304.github.io/walmart-sales-analytics/walmart_dashboard.html)**
 
 ---
 
