@@ -38,7 +38,7 @@ No server or dependencies required — just open the `.html` file in any browser
 |---|---|
 | 💰 Top revenue branch | Naypyitaw (Branch C) — **$110,568** |
 | 🏆 Best product line | Food and Beverages — **$56,145** |
-| 🕐 Peak sales time | **Afternoon** (365 transactions, $122K revenue) |
+| 🕐 Peak sales time | **Afternoon** (454 transactions, $148K revenue) |
 | 📅 Busiest day | **Saturday** (164 transactions) |
 | ⭐ Highest-rated category | Food and Beverages — **7.11 / 10** |
 | 💳 Most used payment | Ewallet & Cash — nearly tied (~34% each) |
@@ -50,7 +50,7 @@ No server or dependencies required — just open the `.html` file in any browser
 ## 🗂️ Project Structure
 
 ```
-walmart-sales-analysis/
+walmart-sales-analytics/
 │
 ├── WalmartSalesData.csv       # Raw dataset (1,000 rows)
 ├── SQL_queries.sql            # MySQL queries for EDA

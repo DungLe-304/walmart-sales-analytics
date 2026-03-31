@@ -850,7 +850,10 @@ class Dashboard {
         const avgRevenue = tableData.length > 0
             ? tableData.reduce((sum, r) => sum + r.revenue, 0) / tableData.length
             : 0;
-        tableData.forEach(r => { r.remark = r.revenue >= avgRevenue ? 'Good' : 'Bad'; });
+        tableData.forEach(r => {
+            r.avg_revenue = avgRevenue;
+            r.remark = r.revenue >= avgRevenue ? 'Good' : 'Bad';
+        });
 
         const sorted = [...tableData].sort((a, b) => {
             const av = a[this.sortCol], bv = b[this.sortCol];
@@ -861,6 +864,7 @@ class Dashboard {
         const cols = [
             { field: 'product', label: 'Product Line' },
             { field: 'revenue', label: 'Revenue ($)', fmt: 'currency' },
+            { field: 'avg_revenue', label: 'Avg Revenue ($)', fmt: 'currency' },
             { field: 'qty', label: 'Units Sold', fmt: 'number' },
             { field: 'orders', label: 'Transactions', fmt: 'number' },
             { field: 'avg_rating', label: 'Avg Rating' },
@@ -876,14 +880,21 @@ class Dashboard {
         html += '</tr></thead><tbody>';
 
         if (sorted.length === 0) {
-            html += '<tr><td colspan="6" style="text-align:center;padding:24px;color:var(--text-secondary)">No data matches the current filters</td></tr>';
+            html += '<tr><td colspan="7" style="text-align:center;padding:24px;color:var(--text-secondary)">No data matches the current filters</td></tr>';
         }
 
         sorted.forEach(row => {
             const ratingPct = (row.avg_rating / 10 * 100).toFixed(0);
+            const diff = row.revenue - row.avg_revenue;
+            const diffColor = diff >= 0 ? 'var(--positive)' : 'var(--negative)';
+            const diffSign = diff >= 0 ? '+' : '';
             html += `<tr>
                 <td><strong>${row.product}</strong></td>
                 <td>${fmt(Math.round(row.revenue), 'currency')}</td>
+                <td>
+                    ${fmt(Math.round(row.avg_revenue), 'currency')}
+                    <span style="font-size:11px;color:${diffColor};margin-left:4px">(${diffSign}${fmt(Math.round(diff), 'currency')})</span>
+                </td>
                 <td>${fmt(row.qty, 'number')}</td>
                 <td>${row.orders}</td>
                 <td>
